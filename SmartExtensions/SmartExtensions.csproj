@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>SmartExtensionMethods</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>John Demetriou</Authors>
+    <Company>devsanon</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageDescription>A list of extension methods for commonly used functionality</PackageDescription>
+    <RootNamespace>SmartExtensionMethods</RootNamespace>
   </PropertyGroup>
 
 </Project>
