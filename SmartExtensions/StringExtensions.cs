@@ -29,11 +29,19 @@ namespace SmartExtensions
             return value.Replace(" ", string.Empty);
         }
 
-        public static bool TryToInt(this string input, out int result)
+        public static bool TryToInt32(this string input, out int result)
         {
             return int.TryParse(input, out result);
         }
 
+        public static bool TryToInt64(this string input, out long result)
+        {
+            return long.TryParse(input, out result);
+        }
+        public static bool TryToInt16(this string input, out short result)
+        {
+            return short.TryParse(input, out result);
+        }
         public static bool TryToDate(this string input, out DateTime result)
         {
             return DateTime.TryParse(input, out result);
