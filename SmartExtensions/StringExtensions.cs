@@ -29,19 +29,45 @@ namespace SmartExtensions
             return value.Replace(" ", string.Empty);
         }
 
+        /// <summary>
+        ///     Attemptes to parse string to Int32. Returns true if successful and false if not. Result contains the result of parsing
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <param name="result">Where result will be stored</param>
+        /// <returns>boolean True False to describe if parsing to System.Int32 was successful</returns>
         public static bool TryToInt32(this string input, out int result)
         {
             return int.TryParse(input, out result);
         }
 
+        /// <summary>
+        ///     Attemptes to parse string to Int64. Returns true if successful and false if not. Result contains the result of parsing
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <param name="result">Where result will be stored</param>
+        /// <returns>boolean True False to describe if parsing to System.Int64 was successful</returns>
         public static bool TryToInt64(this string input, out long result)
         {
             return long.TryParse(input, out result);
         }
+
+        /// <summary>
+        ///     Attemptes to parse string to Int16. Returns true if successful and false if not. Result contains the result of parsing
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <param name="result">Where result will be stored</param>
+        /// <returns>boolean True False to describe if parsing to System.Int16 was successful</returns>
         public static bool TryToInt16(this string input, out short result)
         {
             return short.TryParse(input, out result);
         }
+
+        /// <summary>
+        ///     Attemptes to parse string to DateTime. Returns true if successful and false if not. Result contains the result of parsing
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <param name="result">Where result will be stored</param>
+        /// <returns>boolean True False to describe if parsing to System.DateTime was successful</returns>
         public static bool TryToDate(this string input, out DateTime result)
         {
             return DateTime.TryParse(input, out result);
