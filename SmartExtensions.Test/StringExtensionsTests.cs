@@ -16,5 +16,11 @@ namespace SmartExtensions.Test
         {
             Assert.True("abc@google.com".IsEmail());
         }
+
+        [Fact]
+        public void Reverse_ExpectedResult()
+        {
+            Assert.Equal("moc.elgoog@cba","abc@google.com".Reverse());
+        }
     }
 }
