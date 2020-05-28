@@ -36,5 +36,104 @@ namespace SmartExtensions
 
             return result;
         }
+
+        public static double Pow(this float baseNum, byte power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static double Pow(this float baseNum, ushort power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static double Pow(this float baseNum, uint power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static double Pow(this int baseNum, byte power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static double Pow(this int baseNum, ushort power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static double Pow(this int baseNum, uint power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static double Pow(this short baseNum, byte power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static double Pow(this short baseNum, ushort power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static double Pow(this short baseNum, uint power)
+        {
+            double result = 1;
+            for (var i = 0; i < power; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
     }
 }
