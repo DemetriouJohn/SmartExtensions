@@ -3,6 +3,11 @@
 A big list of commonly used methods and extension methods when using C# built-in types. 
 Methods and extensions all of us write often enough to render grouping them in a nuget package useful. 
 
+## Installation
+
+```PM>
+Install-Package SmartExtensionMethods
+```
 
 ## Currently Available Extension methods
 Most are self explanatory by name but for some, details will be given to explain them. Documentation is included in the source code as well
@@ -21,6 +26,7 @@ Most are self explanatory by name but for some, details will be given to explain
 `TryToDate`</br>
 `TryToDecimal`</br>
 `Reverse`</br>
+`IsEmail`</br>
 
 ### MathExtensions
 

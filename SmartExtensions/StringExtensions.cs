@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace SmartExtensions
 {
@@ -125,6 +126,17 @@ namespace SmartExtensions
             char[] chars = input.ToCharArray();
             Array.Reverse(chars);
             return new string(chars);
+        }
+
+        /// <summary>
+        ///     Validates input if it resembles an email
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>Returns true if input resembles email, otherwise false</returns>
+        public static bool IsEmail(this string input)
+        {
+            var match = Regex.Match(input, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", RegexOptions.IgnoreCase);
+            return match.Success;
         }
     }
 }
