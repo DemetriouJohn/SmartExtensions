@@ -30,9 +30,10 @@ namespace SmartExtensions
         /// </summary>
         /// <param name="input">String value</param>
         /// <returns>Returns true if string is null or empty</returns>
-        public static bool IsNullOrEmpty(this string first)
+        public static bool IsNullOrEmpty(this string input)
         {
-            return string.IsNullOrEmpty(first);
+            return string.IsNullOrEmpty(input);
+        }
         }
 
         /// <summary>
