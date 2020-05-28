@@ -5,7 +5,7 @@ Methods and extensions all of us write often enough to render grouping them in a
 
 
 ## Currently Available Extension methods
-Most are self explanatory by name but for some, details will be given to explain them
+Most are self explanatory by name but for some, details will be given to explain them. Documentation is included in the source code as well
 
 ### StringExtensions
 
@@ -14,8 +14,11 @@ Most are self explanatory by name but for some, details will be given to explain
 `ToValueOrDefault`
 `IsNullOrEmpty`
 `RemoveSpaces`
-`TryToInt`
+`TryToInt16`
+`TryToInt32`
+`TryToInt64`
 `TryToDate`
+`TryToDecimal`
 
 ### MathExtensions
 
