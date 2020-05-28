@@ -72,5 +72,16 @@ namespace SmartExtensions
         {
             return DateTime.TryParse(input, out result);
         }
+
+        /// <summary>
+        ///     Attemptes to parse string to Decimal. Returns true if successful and false if not. Result contains the result of parsing
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <param name="result">Where result will be stored</param>
+        /// <returns>boolean True False to describe if parsing to System.Decimal was successful</returns>
+        public static bool TryToDecimal(this string input, out decimal result)
+        {
+            return decimal.TryParse(input, out result);
+        }
     }
 }
