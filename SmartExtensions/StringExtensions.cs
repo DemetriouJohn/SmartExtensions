@@ -14,16 +14,32 @@ namespace SmartExtensions
             return string.Compare(first, second, StringComparison.InvariantCultureIgnoreCase) == 0;
         }
 
+        /// <summary>
+        ///     Checks if string has value, if not, returns default
+        /// </summary>
+        /// <param name="input">String input</param>
+        /// <param name="@default">default value to return</param>
+        /// <returns>Returns original value if not null or empty, otherwise return default value</returns>
         public static string ToValueOrDefault(this string value, string @default)
         {
-            return !string.IsNullOrEmpty(value) ? value : @default;
+            return !value.IsNullOrEmpty() ? value : @default;
         }
 
+        /// <summary>
+        ///     Checks if string is null or empty
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>Returns true if string is null or empty</returns>
         public static bool IsNullOrEmpty(this string first)
         {
             return string.IsNullOrEmpty(first);
         }
 
+        /// <summary>
+        ///     Returns a new string with all the spaces removed
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>The new string</returns>
         public static string RemoveSpaces(this string value)
         {
             return value.Replace(" ", string.Empty);
