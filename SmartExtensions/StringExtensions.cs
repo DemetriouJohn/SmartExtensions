@@ -46,7 +46,7 @@ namespace SmartExtensions
         }
 
         /// <summary>
-        ///     Attemptes to parse string to Int32. Returns true if successful and false if not. Result contains the result of parsing
+        ///     Attempts to parse string to Int32. Returns true if successful and false if not. Result contains the result of parsing
         /// </summary>
         /// <param name="input">String value</param>
         /// <param name="result">Where result will be stored</param>
@@ -57,7 +57,7 @@ namespace SmartExtensions
         }
 
         /// <summary>
-        ///     Attemptes to parse string to Int64. Returns true if successful and false if not. Result contains the result of parsing
+        ///     Attempts to parse string to Int64. Returns true if successful and false if not. Result contains the result of parsing
         /// </summary>
         /// <param name="input">String value</param>
         /// <param name="result">Where result will be stored</param>
@@ -68,7 +68,7 @@ namespace SmartExtensions
         }
 
         /// <summary>
-        ///     Attemptes to parse string to Int16. Returns true if successful and false if not. Result contains the result of parsing
+        ///     Attempts to parse string to Int16. Returns true if successful and false if not. Result contains the result of parsing
         /// </summary>
         /// <param name="input">String value</param>
         /// <param name="result">Where result will be stored</param>
@@ -79,7 +79,7 @@ namespace SmartExtensions
         }
 
         /// <summary>
-        ///     Attemptes to parse string to DateTime. Returns true if successful and false if not. Result contains the result of parsing
+        ///     Attempts to parse string to DateTime. Returns true if successful and false if not. Result contains the result of parsing
         /// </summary>
         /// <param name="input">String value</param>
         /// <param name="result">Where result will be stored</param>
@@ -90,7 +90,7 @@ namespace SmartExtensions
         }
 
         /// <summary>
-        ///     Attemptes to parse string to Decimal. Returns true if successful and false if not. Result contains the result of parsing
+        ///     Attempts to parse string to Decimal. Returns true if successful and false if not. Result contains the result of parsing
         /// </summary>
         /// <param name="input">String value</param>
         /// <param name="result">Where result will be stored</param>
