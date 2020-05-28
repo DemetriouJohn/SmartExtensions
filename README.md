@@ -9,16 +9,18 @@ Most are self explanatory by name but for some, details will be given to explain
 
 ### StringExtensions
 
-`CaseInsensitiveContains`
-`CaseInsensitiveCompare`
-`ToValueOrDefault`
-`IsNullOrEmpty`
-`RemoveSpaces`
-`TryToInt16`
-`TryToInt32`
-`TryToInt64`
-`TryToDate`
-`TryToDecimal`
+`CaseInsensitiveContains` </br>
+`CaseInsensitiveCompare`</br>
+`ToValueOrDefault`</br>
+`IsNullOrEmpty`</br>
+`IsNullOrWhitespace`</br>
+`RemoveSpaces`</br>
+`TryToInt16`</br>
+`TryToInt32`</br>
+`TryToInt64`</br>
+`TryToDate`</br>
+`TryToDecimal`</br>
+`Reverse`</br>
 
 ### MathExtensions
 

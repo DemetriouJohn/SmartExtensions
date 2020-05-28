@@ -34,6 +34,15 @@ namespace SmartExtensions
         {
             return string.IsNullOrEmpty(input);
         }
+
+        /// <summary>
+        ///     Checks if string is null or Whitespace
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>Returns true if string is null or Whitespace</returns>
+        public static bool IsNullOrWhitespace(this string input)
+        {
+            return string.IsNullOrWhiteSpace(input);
         }
 
         /// <summary>
@@ -99,6 +108,23 @@ namespace SmartExtensions
         public static bool TryToDecimal(this string input, out decimal result)
         {
             return decimal.TryParse(input, out result);
+        }
+
+        /// <summary>
+        ///     Reverses a string
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>Returns the reversed string</returns>
+        public static string Reverse(this string input)
+        {
+            if (input.IsNullOrWhitespace())
+            {
+                return string.Empty;
+            }
+
+            char[] chars = input.ToCharArray();
+            Array.Reverse(chars);
+            return new string(chars);
         }
     }
 }
