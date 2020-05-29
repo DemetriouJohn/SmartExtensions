@@ -135,5 +135,10 @@ namespace SmartExtensions
 
             return result;
         }
+
+        public static double Pow(this double baseNum, double power)
+        {
+            return Math.Pow(baseNum, power);
+        }
     }
 }
