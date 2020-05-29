@@ -94,7 +94,53 @@ namespace SmartExtensions.Tests
 
             Assert.Equal(DayOfWeek.Monday, expected.DayOfWeek);
             Assert.Equal(expected, _march.LastDayOfMonth(DayOfWeek.Monday));
+        }
 
+        [Fact]
+        public void GetMidnight_ExpectedResult()
+        {
+            var friday = new DateTime(2020, 5, 29, 17, 15, 30); // monday 3rd of March, 2008, 17h 15m 30s
+            var fridayMidnight = new DateTime(2020, 5, 29, 0, 0, 0);
+            Assert.Equal(fridayMidnight, friday.GetMidnight());
+        }
+
+        [Fact]
+        public void GetNoon_ExpectedResult()
+        {
+            var fridayNoon = new DateTime(2020, 5, 29, 12, 0, 0);
+            var friday = new DateTime(2020, 5, 29, 17, 15, 30); // monday 3rd of March, 2008, 17h 15m 30s
+            Assert.Equal(fridayNoon, friday.GetNoon());
+        }
+
+        [Fact]
+        public void SetTimeToMinutePrecision()
+        {
+            var fridayMidnight = new DateTime(2020, 5, 29, 0, 0, 0);
+            DateTime expected = fridayMidnight.AddHours(14).AddMinutes(30);
+            var friday = new DateTime(2020, 5, 29, 17, 15, 30); // monday 3rd of March, 2008, 17h 15m 30s
+
+            Assert.Equal(expected, friday.SetTime(14, 30));
+        }
+
+        [Fact]
+        public void SetTimeToSecondPrecision()
+        {
+            var fridayMidnight = new DateTime(2020, 5, 29, 0, 0, 0);
+            DateTime expected = fridayMidnight.AddHours(14).AddMinutes(30).AddSeconds(15);
+
+            var friday = new DateTime(2020, 5, 29, 17, 15, 30); // monday 3rd of March, 2008, 17h 15m 30s
+
+            Assert.Equal(expected, friday.SetTime(14, 30, 15));
+        }
+
+        [Fact]
+        public void SetTimeToMillisecondPrecision()
+        {
+            var fridayMidnight = new DateTime(2020, 5, 29, 0, 0, 0);
+            var friday = new DateTime(2020, 5, 29, 17, 15, 30); // monday 3rd of March, 2008, 17h 15m 30s
+
+            DateTime expected = fridayMidnight.AddHours(14).AddMinutes(30).AddSeconds(15).AddMilliseconds(7);
+            Assert.Equal(expected, friday.SetTime(14, 30, 15, 7));
         }
     }
 }
