@@ -37,3 +37,11 @@ Most are self explanatory by name but for some, details will be given to explain
 
 `IsNaN`
 `IsInfinity`
+
+### DateTimeExtensions
+
+`FirstDayOfMonth` Get first day of the month
+`FirstDayOfMonth` Get first specific day of the month
+`NextSpecificDay` Next specific day
+`LastDayOfMonth` Get last day of the month
+`LastDayOfMonth` Get last specific day of the month
