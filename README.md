@@ -27,6 +27,7 @@ Most are self explanatory by name but for some, details will be given to explain
 `TryToDecimal`</br>
 `Reverse`</br>
 `IsEmail`</br>
+`IsPhone`</br>
 
 ### MathExtensions
 

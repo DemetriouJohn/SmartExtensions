@@ -20,7 +20,19 @@ namespace SmartExtensions.Test
         [Fact]
         public void Reverse_ExpectedResult()
         {
-            Assert.Equal("moc.elgoog@cba","abc@google.com".Reverse());
+            Assert.Equal("moc.elgoog@cba", "abc@google.com".Reverse());
+        }
+
+        [Fact]
+        public void OsPhone_ValidNumberPrefixedPlus_True()
+        {
+            Assert.True("+1234".IsPhone());
+        }
+
+        [Fact]
+        public void IsPhone_ValidNumberPrefixedTwoPlus_False()
+        {
+            Assert.False("++1234".IsPhone());
         }
     }
 }

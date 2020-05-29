@@ -138,5 +138,16 @@ namespace SmartExtensions
             var match = Regex.Match(input, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", RegexOptions.IgnoreCase);
             return match.Success;
         }
+
+        /// <summary>
+        ///     Validates input if it resembles a phone number
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>Returns true if input resembles a phone number, otherwise false</returns>
+        public static bool IsPhone(this string input)
+        {
+            var match = Regex.Match(input, @"^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$", RegexOptions.IgnoreCase);
+            return match.Success;
+        }
     }
 }
