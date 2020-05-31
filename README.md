@@ -37,8 +37,8 @@ Most are self explanatory by name but for some, details will be given to explain
 
 `IsNaN`</br>
 `IsInfinity`</br>
-`GetPercentage`</br> Returns a value representing the percentage requested
-`Pow` </br> Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster
+`GetPercentage` Returns a value representing the percentage requested</br>
+`Pow`  Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
 ### DateTimeExtensions
 
