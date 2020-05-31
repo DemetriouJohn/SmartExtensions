@@ -64,5 +64,29 @@ namespace SmartExtensions.Test
             Assert.False(x.IsInfinity());
         }
 
+
+        [Fact]
+        public void GetPercentage_Double_Int()
+        {
+            Assert.Equal(33.0M, ((double)100.0F).GetPercentage((int)33));
+        }
+
+        [Fact]
+        public void GetPercentage_Double_Float()
+        {
+            Assert.Equal(33.0M, ((double)100.0F).GetPercentage((float)33.0F));
+        }
+
+        [Fact]
+        public void GetPercentage_Double_Double()
+        {
+            Assert.Equal(33.0M, ((double)100.0F).GetPercentage((double)33.0F));
+        }
+
+        [Fact]
+        public void GetPercentage_Double_Long()
+        {
+            Assert.Equal(33.0M, ((double)33.0F).GetPercentage((long)100));
+        }
     }
 }

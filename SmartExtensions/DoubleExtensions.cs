@@ -72,5 +72,48 @@ namespace SmartExtensions
 
             return result;
         }
+
+        /// <summary>
+        /// Toes the percent.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="percentOf">The percent of.</param>
+        /// <returns></returns>
+        public static decimal GetPercentage(this double value, int percentOf)
+        {
+            return (decimal)(value * percentOf / 100);
+        }
+
+        /// <summary>
+        /// Toes the percent.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="percentOf">The percent of.</param>
+        /// <returns></returns>
+        public static decimal GetPercentage(this double value, float percentOf)
+        {
+            return (decimal)(value * percentOf / 100);
+        }
+
+        /// <summary>
+        /// Toes the percent.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="percentOf">The percent of.</param>
+        /// <returns></returns>
+        public static decimal GetPercentage(this double value, double percentOf)
+        {
+            return (decimal)(value * percentOf / 100);
+        }
+        /// <summary>
+        /// Toes the percent.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="percentOf">The percent of.</param>
+        /// <returns></returns>
+        public static decimal GetPercentage(this double value, long percentOf)
+        {
+            return (decimal)(value * percentOf / 100);
+        }
     }
 }
