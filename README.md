@@ -3,6 +3,8 @@
 A big list of commonly used methods and extension methods when using C# built-in types. 
 Methods and extensions all of us write often enough to render grouping them in a nuget package useful. 
 
+![.NET Core](https://github.com/DevsAnon/SmartExtensions/workflows/.NET%20Core/badge.svg)
+
 ## Installation
 
 ```PM>
