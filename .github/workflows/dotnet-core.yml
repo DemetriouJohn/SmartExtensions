@@ -20,6 +20,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build SmartExtensions\SmartExtensions.csproj --configuration Release --no-restore
+      run: dotnet build --source SmartExtensions\SmartExtensions.csproj --configuration Release --no-restore
     - name: Test
-      run: dotnet test SmartExtensions.Test\SmartExtensions.Test.csproj --no-restore --verbosity normal
+      run: dotnet test ~SmartExtensions.Test\SmartExtensions.Test.csproj --no-restore --verbosity normal
