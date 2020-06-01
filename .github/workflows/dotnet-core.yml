@@ -19,10 +19,10 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies for project
-      run: dotnet restore ~/SmartExtensions/SmartExtensions/SmartExtensions.csproj
+      run: dotnet restore ~/work/SmartExtensions/SmartExtensions/SmartExtensions.csproj
     - name: Build
-      run: dotnet build ./SmartExtensions --configuration Release --no-restore
+      run: dotnet build ./work/SmartExtensions/SmartExtensions --configuration Release --no-restore
     - name: Install dependencies for test project
-      run: dotnet restore ~./SmartExtensions.Test/SmartExtensions.Test.csproj
+      run: dotnet restore ~/work/SmartExtensions/SmartExtensions.Test/SmartExtensions.Test.csproj
     - name: Test
       run: dotnet test ~./SmartExtensions.Test/SmartExtensions.Test.csproj --no-restore --verbosity normal
