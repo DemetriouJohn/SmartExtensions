@@ -19,7 +19,7 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies for project
-      run: dotnet restore ~/SmartExtensions/
+      run: dotnet restore ~/SmartExtensions/SmartExtensions/
     - name: Build
       run: dotnet build ./SmartExtensions --configuration Release --no-restore
     - name: Install dependencies for test project
