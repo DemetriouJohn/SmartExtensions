@@ -3,28 +3,28 @@ using Xunit;
 
 namespace SmartExtensions.Test
 {
-    public class DoubleExtensionsTest
+    public class FloatExtensionsTest
     {
         [Fact]
-        public void Pow_DoubleBaseBytePow_CorrectResult()
+        public void Pow_FloatBaseBytePow_CorrectResult()
         {
-            double baseNum = 129;
+            float baseNum = 129f;
             byte pow = 5;
             Assert.Equal(Math.Pow(baseNum, pow), baseNum.Pow(pow));
         }
 
         [Fact]
-        public void Pow_DoubleBaseUShortPow_CorrectResult()
+        public void Pow_FloatBaseUShortPow_CorrectResult()
         {
-            double baseNum = 129;
+            float baseNum = 129f;
             ushort pow = 5;
             Assert.Equal(Math.Pow(baseNum, pow), baseNum.Pow(pow));
         }
 
         [Fact]
-        public void Pow_DoubleBaseIntPow_CorrectResult()
+        public void Pow_FloatBaseIntPow_CorrectResult()
         {
-            double baseNum = 129;
+            float baseNum = 129f;
             uint pow = 5;
             Assert.Equal(Math.Pow(baseNum, pow), baseNum.Pow(pow));
         }
@@ -32,59 +32,59 @@ namespace SmartExtensions.Test
         [Fact]
         public void IsNan_Nan_True()
         {
-            double x = double.NaN;
+            float x = float.NaN;
             Assert.True(x.IsNan());
         }
 
         [Fact]
         public void IsNan_NotNan_False()
         {
-            double x = 5;
+            float x = 5;
             Assert.False(x.IsNan());
         }
 
         [Fact]
         public void IsInfinity_PositiveInfinity_True()
         {
-            double x = double.PositiveInfinity;
+            float x = float.PositiveInfinity;
             Assert.True(x.IsInfinity());
         }
 
         [Fact]
         public void IsInfinity_NegativeInfinity_True()
         {
-            double x = double.NegativeInfinity;
+            float x = float.NegativeInfinity;
             Assert.True(x.IsInfinity());
         }
 
         [Fact]
         public void IsInfinity_NotInfinity_False()
         {
-            double x = 5;
+            float x = 5;
             Assert.False(x.IsInfinity());
         }
 
 
         [Fact]
-        public void GetPercentage_Double_Int()
+        public void GetPercentage_Float_Int()
         {
-            Assert.Equal(33.0M, 100.0.GetPercentage((int)33));
+            Assert.Equal(33.0M, 100.0F.GetPercentage((int)33));
         }
 
         [Fact]
-        public void GetPercentage_Double_Float()
+        public void GetPercentage_Float_Float()
         {
-            Assert.Equal(33.0M, 100.0.GetPercentage((float)33.0F));
+            Assert.Equal(33.0M, 100.0F.GetPercentage((float)33.0F));
         }
 
         [Fact]
-        public void GetPercentage_Double_Double()
+        public void GetPercentage_Float_Double()
         {
-            Assert.Equal(33.0M, 100.0.GetPercentage(33.0F));
+            Assert.Equal(33.0M, 100.0F.GetPercentage((double)33.0));
         }
 
         [Fact]
-        public void GetPercentage_Double_Long()
+        public void GetPercentage_Float_Long()
         {
             Assert.Equal(33.0M, 33.0F.GetPercentage((long)100));
         }
