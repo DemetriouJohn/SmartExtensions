@@ -49,6 +49,11 @@ Most are self explanatory by name but for some, details will be given to explain
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
+### IntExtensions
+
+`GetPercentage` Returns a value representing the percentage requested</br>
+`Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
+
 ### DateTimeExtensions
 
 `FirstDayOfMonth` Get first day of the month</br>

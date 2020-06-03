@@ -4,39 +4,6 @@ namespace SmartExtensions
 {
     public static class MathExtensions
     {
-        public static double Pow(this int baseNum, byte power)
-        {
-            double result = 1;
-            for (var i = 0; i < power; i++)
-            {
-                result *= baseNum;
-            }
-
-            return result;
-        }
-
-        public static double Pow(this int baseNum, ushort power)
-        {
-            double result = 1;
-            for (var i = 0; i < power; i++)
-            {
-                result *= baseNum;
-            }
-
-            return result;
-        }
-
-        public static double Pow(this int baseNum, uint power)
-        {
-            double result = 1;
-            for (var i = 0; i < power; i++)
-            {
-                result *= baseNum;
-            }
-
-            return result;
-        }
-
         public static double Pow(this short baseNum, byte power)
         {
             double result = 1;
