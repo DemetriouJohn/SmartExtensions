@@ -31,10 +31,6 @@ Most are self explanatory by name but for some, details will be given to explain
 `IsEmail`</br>
 `IsPhone`</br>
 
-### MathExtensions
-
-`Pow` - Several extensions exist for this one. Some of them are for simplicity. But in general it has been measured that using a loop for calculating the positive power of any number is faster than using the whole logic of the built-in Pow method which has a lot of checks for negative or non-integer numbers</br>
-
 ### DoubleExtensions
 
 `IsNaN`</br>
