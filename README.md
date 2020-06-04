@@ -54,6 +54,11 @@ Most are self explanatory by name but for some, details will be given to explain
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
+### ShortExtensions
+
+`GetPercentage` Returns a value representing the percentage requested</br>
+`Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
+
 ### DateTimeExtensions
 
 `FirstDayOfMonth` Get first day of the month</br>
@@ -64,4 +69,3 @@ Most are self explanatory by name but for some, details will be given to explain
 `SetTime` Get DateTime with specific time. Overloads for minute accuracy, second accuracy and milisecond accuracy</br>
 `GetNoon` Gets a DateTime representing noon on the current date</br>
 `GetMidnight` Gets a DateTime representing midnight on the current date</br>
-

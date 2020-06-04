@@ -8,7 +8,7 @@ namespace SmartExtensions.Test
         [Fact]
         public void Pow_IntBaseBytePow_CorrectResult()
         {
-            float baseNum = 129;
+            int baseNum = 129;
             byte pow = 5;
             Assert.Equal(Math.Pow(baseNum, pow), baseNum.Pow(pow));
         }
