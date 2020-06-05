@@ -16,20 +16,20 @@ Most are self explanatory by name but for some, details will be given to explain
 
 ### StringExtensions
 
-`CaseInsensitiveContains` </br> Checks if string is contained using case insensitive search
-`CaseInsensitiveCompare`</br> Compares two string using insensitive case
-`ToValueOrDefault`</br> Returns value or if null, returns provided default value
-`IsNullOrEmpty`</br> Checks if string is null or empty
-`IsNullOrWhitespace`</br> Checks if string is null or white space
-`RemoveSpaces`</br> Removes all spaces from string
-`TryToInt16`</br> Casts string to short using the try pattern
-`TryToInt32`</br> Casts string to int using the try pattern
-`TryToInt64`</br> Casts string to long using the try pattern
-`TryToDate`</br> Casts string to date using the try pattern
-`TryToDecimal`</br> Casts string to decimal using the try pattern
-`Reverse`</br> Reverses the string
-`IsEmail`</br> Checks if string is an email string
-`IsPhone`</br> Checks if string resembles a phone number
+`CaseInsensitiveContains` Checks if string is contained using case insensitive search</br> 
+`CaseInsensitiveCompare` Compares two string using insensitive case</br> 
+`ToValueOrDefault` Returns value or if null, returns provided default value</br> 
+`IsNullOrEmpty` Checks if string is null or empty</br> 
+`IsNullOrWhitespace` Checks if string is null or white space</br> 
+`RemoveSpaces` Removes all spaces from string</br> 
+`TryToInt16` Casts string to short using the try pattern</br> 
+`TryToInt32` Casts string to int using the try pattern</br> 
+`TryToInt64` Casts string to long using the try pattern</br> 
+`TryToDate` Casts string to date using the try pattern</br> 
+`TryToDecimal` Casts string to decimal using the try pattern</br> 
+`Reverse` Reverses the string</br> 
+`IsEmail` Checks if string is an email string</br> 
+`IsPhone` Checks if string resembles a phone number</br> 
 
 ### DoubleExtensions
 
