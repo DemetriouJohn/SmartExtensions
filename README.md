@@ -67,3 +67,6 @@ Most are self explanatory by name but for some, details will be given to explain
 `SetTime` Get DateTime with specific time. Overloads for minute accuracy, second accuracy and milisecond accuracy</br>
 `GetNoon` Gets a DateTime representing noon on the current date</br>
 `GetMidnight` Gets a DateTime representing midnight on the current date</br>
+
+### IEnumerableExtensions
+`Sum` Introduced sum method for LINQ usage for TimeSpans</br>
