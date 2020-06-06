@@ -4,6 +4,17 @@ namespace SmartExtensions
 {
     public static class DoubleExtensions
     {
+
+        /// <summary>
+        ///     Using Pow as instance method for simplicity
+        /// </summary>
+        /// <param name="input">double value</param>
+        /// <returns>Value of baseNum raised in Pow</returns>
+        public static double Pow(this double baseNum, double power)
+        {
+            return Math.Pow(baseNum, power);
+        }
+
         /// <summary>
         ///     Checks if value is NaN
         /// </summary>
@@ -28,7 +39,7 @@ namespace SmartExtensions
         ///     Implement Pow by using a for loop when power is a non-zero positive non floating point number
         /// </summary>
         /// <param name="input">double value</param>
-        /// <returns>Returns true if value is infinity, otherwise false </returns>
+        /// <returns>Value of baseNum raised in Pow</returns>
 
         public static double Pow(this double baseNum, byte power)
         {
@@ -45,7 +56,7 @@ namespace SmartExtensions
         ///     Implement Pow by using a for loop when power is a non-zero positive non floating point number
         /// </summary>
         /// <param name="input">double value</param>
-        /// <returns>Returns true if value is infinity, otherwise false </returns>
+        /// <returns>Value of baseNum raised in Pow</returns>
         public static double Pow(this double baseNum, ushort power)
         {
             double result = 1;
@@ -61,7 +72,7 @@ namespace SmartExtensions
         ///     Implement Pow by using a for loop when power is a non-zero positive non floating point number
         /// </summary>
         /// <param name="input">double value</param>
-        /// <returns>Returns true if value is infinity, otherwise false </returns>
+        /// <returns>Value of baseNum raised in Pow</returns>
         public static double Pow(this double baseNum, uint power)
         {
             double result = 1;
