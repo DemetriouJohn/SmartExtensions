@@ -19,5 +19,28 @@ namespace SmartExtensions.Test
 
             Assert.Equal(expected, sum);
         }
+
+        [Fact]
+        public void IsNullOrEmpty_Empty_True()
+        {
+            var list = new List<string>();
+            Assert.True(list.IsNullOrEmpty());
+        }
+
+        [Fact]
+        public void IsNullOrEmpty_NotEmpty_False()
+        {
+            var list = new List<string>();
+            list.Add("Test1");
+            list.Add("Test2");
+            Assert.False(list.IsNullOrEmpty());
+        }
+
+        [Fact]
+        public void IsNullOrEmpty_Null_True()
+        {
+            List<string> list = null;
+            Assert.True(list.IsNullOrEmpty());
+        }
     }
 }

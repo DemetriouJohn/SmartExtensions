@@ -70,3 +70,5 @@ Most are self explanatory by name but for some, details will be given to explain
 
 ### IEnumerableExtensions
 `Sum` Introduced sum method for LINQ usage for TimeSpans</br>
+`IsNullOrEmpty` Checks if Enumerable is null or empty</br>
+`Foreach` Executes provided action on each item of the Enumerable</br>
