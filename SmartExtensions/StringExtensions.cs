@@ -169,5 +169,23 @@ namespace SmartExtensions
 
             return true;
         }
+
+        /// <summary>
+        ///     Check whether the specified string contains an array of strings for each.
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>Returns true if all strings are contained, otherwise false</returns>
+        public static bool ContainsAll(this string value, params string[] values)
+        {
+            foreach (string one in values)
+            {
+                if (!value.Contains(one))
+                {
+                    return false;
+                }
+            }
+            
+            return true;
+        }
     }
 }

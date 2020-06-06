@@ -31,6 +31,7 @@ Most are self explanatory by name but for some, details will be given to explain
 `IsEmail` Checks if string is an email string</br> 
 `IsPhone` Checks if string resembles a phone number</br> 
 `IsPalindrome` Checks if string is a palindrome</br> 
+`ContainsAll` Check whether the specified string contains an array of strings for each.</br> 
 
 ### DoubleExtensions
 

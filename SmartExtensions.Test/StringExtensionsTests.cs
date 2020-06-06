@@ -46,5 +46,22 @@ namespace SmartExtensions.Test
         {
             Assert.False("bsdsa".IsPalindrome());
         }
+
+        [Fact]
+        public void ContainsAll_AllContained_True()
+        {
+            string value = "John from Cyprus";
+            var values = new[] { "John", "Cyprus" };
+            Assert.True(value.ContainsAll(values));
+        }
+
+        
+        [Fact]
+        public void ContainsAll_NotAllContained_False()
+        {
+            string value = "John from Cyprus";
+            var values = new[] { "John", "Greece" };
+            Assert.False(value.ContainsAll(values));
+        }
     }
 }
