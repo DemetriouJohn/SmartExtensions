@@ -88,5 +88,13 @@ namespace SmartExtensions.Test
         {
             Assert.Equal(33.0M, 33.0F.GetPercentage((long)100));
         }
+
+        [Fact]
+        public void Pow_DoubleBaseDoublePow_CorrectResult()
+        {
+            double baseNum = 129;
+            double pow = 5;
+            Assert.Equal(Math.Pow(baseNum, pow), baseNum.Pow(pow));
+        }
     }
 }
