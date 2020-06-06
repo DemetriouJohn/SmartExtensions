@@ -140,6 +140,22 @@ namespace SmartExtensions
         }
 
         /// <summary>
+        ///     Extracts email from a string
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>Returns string email if one exists, or empty string if not</returns>
+        public static string ExtractEmail(this string input)
+        {
+            if (input == null || string.IsNullOrWhiteSpace(input))
+            {
+                return string.Empty;
+            }
+
+            var match = Regex.Match(input, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", RegexOptions.IgnoreCase);
+            return match.Success ? match.Value : string.Empty;
+        }
+
+        /// <summary>
         ///     Validates input if it resembles a phone number
         /// </summary>
         /// <param name="input">String value</param>
@@ -184,7 +200,7 @@ namespace SmartExtensions
                     return false;
                 }
             }
-            
+
             return true;
         }
     }

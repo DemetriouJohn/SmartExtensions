@@ -55,13 +55,31 @@ namespace SmartExtensions.Test
             Assert.True(value.ContainsAll(values));
         }
 
-        
+
         [Fact]
         public void ContainsAll_NotAllContained_False()
         {
             string value = "John from Cyprus";
             var values = new[] { "John", "Greece" };
             Assert.False(value.ContainsAll(values));
+        }
+
+        [Fact]
+        public void extractEmail_containsEmail_Email()
+        {
+            Assert.Equal("email@email.com", "name,+86738238;email@email.com;address".ExtractEmail());
+        }
+
+        [Fact]
+        public void extractEmail_noEmail_empty()
+        {
+            Assert.Equal("", "just some text".ExtractEmail());
+        }
+
+        [Fact]
+        public void extractEmail_Email_Email()
+        {
+            Assert.Equal("abc@abc.com", "abc@abc.com".ExtractEmail());
         }
     }
 }
