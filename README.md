@@ -30,6 +30,7 @@ Most are self explanatory by name but for some, details will be given to explain
 `Reverse` Reverses the string</br> 
 `IsEmail` Checks if string is an email string</br> 
 `IsPhone` Checks if string resembles a phone number</br> 
+`IsPalindrome` Checks if string is a palindrome</br> 
 
 ### DoubleExtensions
 

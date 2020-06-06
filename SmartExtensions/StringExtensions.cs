@@ -149,5 +149,25 @@ namespace SmartExtensions
             var match = Regex.Match(input, @"^\+?(\d[\d-. ]+)?(\([\d-. ]+\))?[\d-. ]+\d$", RegexOptions.IgnoreCase);
             return match.Success;
         }
+
+        /// <summary>
+        ///     Checks to see if the given text is a valid palindrome or not.
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <returns>Returns true if input is a palindrome, otherwise false</returns>
+        public static bool IsPalindrome(this string input)
+        {
+            int nLen = input.Length - 1;
+            int nHalfLen = nLen / 2;
+            for (int i = 0; i < nHalfLen; i++)
+            {
+                if (input.Substring(i, 1) != input.Substring(nLen - i, 1))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

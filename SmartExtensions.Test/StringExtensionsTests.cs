@@ -34,5 +34,17 @@ namespace SmartExtensions.Test
         {
             Assert.False("++1234".IsPhone());
         }
+
+        [Fact]
+        public void IsPallindrome_ValidPalindrome_True()
+        {
+            Assert.True("asdsa".IsPalindrome());
+        }
+
+        [Fact]
+        public void IsPallindrome_InValidPalindrome_False()
+        {
+            Assert.False("bsdsa".IsPalindrome());
+        }
     }
 }
