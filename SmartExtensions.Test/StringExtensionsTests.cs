@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace SmartExtensions.Test
@@ -65,21 +66,32 @@ namespace SmartExtensions.Test
         }
 
         [Fact]
-        public void extractEmail_containsEmail_Email()
+        public void ExtractEmail_containsEmail_Email()
         {
             Assert.Equal("email@email.com", "name,+86738238;email@email.com;address".ExtractEmail());
         }
 
         [Fact]
-        public void extractEmail_noEmail_empty()
+        public void ExtractEmail_noEmail_empty()
         {
             Assert.Equal("", "just some text".ExtractEmail());
         }
 
         [Fact]
-        public void extractEmail_Email_Email()
+        public void ExtractEmail_Email_Email()
         {
             Assert.Equal("abc@abc.com", "abc@abc.com".ExtractEmail());
+        }
+
+        [Fact]
+        public void Join_IEnumerableStrigns_CorrectResult()
+        {
+            var list = new List<string>();
+            list.Add("a");
+            list.Add("bas");
+            list.Add("cd");
+            var separator = ",";
+            Assert.Equal(string.Join(separator, list), list.Join(separator));
         }
     }
 }

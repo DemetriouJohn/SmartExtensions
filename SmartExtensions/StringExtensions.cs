@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace SmartExtensions
@@ -203,5 +204,11 @@ namespace SmartExtensions
 
             return true;
         }
+
+        /// <summary>
+        /// Joins a list of strings with a separator
+        /// </summary>
+        public static string Join<T>(this IEnumerable<T> values, string separator)
+            => string.Join(separator, values);
     }
 }
