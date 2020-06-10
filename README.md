@@ -29,6 +29,7 @@ Most are self explanatory by name but for some, details will be given to explain
 `TryToDecimal` Casts string to decimal using the try pattern</br> 
 `Reverse` Reverses the string</br> 
 `IsEmail` Checks if string is an email string</br> 
+`ExtractEmail` Returns a new string containing what was defined as email from the original string. If no email found retursn String.empty</br> 
 `IsPhone` Checks if string resembles a phone number</br> 
 `IsPalindrome` Checks if string is a palindrome</br> 
 `ContainsAll` Check whether the specified string contains an array of strings for each.</br> 
