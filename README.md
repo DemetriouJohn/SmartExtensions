@@ -15,7 +15,7 @@ Install-Package SmartExtensionMethods
 
 ## Currently Available Extension methods
 
-### StringExtensions (20)
+### StringExtensions (23)
 
 `CaseInsensitiveContains` Checks if string is contained using case insensitive search</br> 
 `CaseInsensitiveCompare` Compares two string using insensitive case</br> 
@@ -37,6 +37,10 @@ Install-Package SmartExtensionMethods
 `DeserializeXml<T>` Deserializes string XML to type &lt;T&gt;.</br> 
 `Nl2Br` Converts Windows and Linux new line characters to HTML break characters</br>
 `EqualsAny` Check that the given string is in a list of potential matches.</br>
+`Join` Joins a list of strings with the provided separator</br>
+`JoinWithComma` Joins a list of strings with ", "</br>
+`JoinWithSpace` Joins a list of strings with a single space</br>
+
 
 ### DoubleExtensions (4)
 

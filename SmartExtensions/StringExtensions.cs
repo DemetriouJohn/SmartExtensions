@@ -209,10 +209,22 @@ namespace SmartExtensions
         }
 
         /// <summary>
-        /// Joins a list of strings with a separator
+        /// Joins a list of strings with the provided separator
         /// </summary>
-        public static string Join<T>(this IEnumerable<T> values, string separator)
+        public static string Join(this IEnumerable<string> values, string separator)
             => string.Join(separator, values);
+
+        /// <summary>
+        /// Joins a list of strings with a single space
+        /// </summary>
+        public static string JoinWithSpace(this IEnumerable<string> values)
+            => values.Join(" ");
+
+        /// <summary>
+        /// Joins a list of strings with ", "
+        /// </summary>
+        public static string JoinWithComma(this IEnumerable<string> values)
+            => values.Join(", ");
 
         /// <summary>
         ///     Deserializes string to type &lt;T&gt;.
