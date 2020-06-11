@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
@@ -233,6 +234,14 @@ namespace SmartExtensions
         public static string Nl2Br(this string s)
         {
             return s.Replace("\r\n", "<br />").Replace("\n", "<br />");
+        }
+
+        /// <summary>
+        /// Check that the given string is in a list of potential matches.
+        /// </summary>
+        public static bool EqualsAny(this string str, params string[] args)
+        {
+            return args.Any(x => StringComparer.InvariantCultureIgnoreCase.Equals(x, str));
         }
     }
 }

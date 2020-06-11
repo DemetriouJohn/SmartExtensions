@@ -15,7 +15,7 @@ Install-Package SmartExtensionMethods
 
 ## Currently Available Extension methods
 
-### StringExtensions (18)
+### StringExtensions (20)
 
 `CaseInsensitiveContains` Checks if string is contained using case insensitive search</br> 
 `CaseInsensitiveCompare` Compares two string using insensitive case</br> 
@@ -35,7 +35,8 @@ Install-Package SmartExtensionMethods
 `IsPalindrome` Checks if string is a palindrome</br> 
 `ContainsAll` Check whether the specified string contains an array of strings for each.</br> 
 `DeserializeXml<T>` Deserializes string XML to type &lt;T&gt;.</br> 
-`Nl2Br` Converts Windows and Linux new line characters to HTML break characters</br> 
+`Nl2Br` Converts Windows and Linux new line characters to HTML break characters</br>
+`EqualsAny` Check that the given string is in a list of potential matches.</br>
 
 ### DoubleExtensions (4)
 

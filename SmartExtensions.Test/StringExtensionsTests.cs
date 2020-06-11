@@ -111,5 +111,12 @@ namespace SmartExtensions.Test
             string s = "line1\r\nline2";
             Assert.Equal("line1<br />line2", s.Nl2Br());
         }
+
+        [Fact]
+        public void EqualsAny_StringInsideParams_True()
+        {
+            string value = "foo";
+            Assert.True(value.EqualsAny("bar", "baz", "FOO"));
+        }
     }
 }
