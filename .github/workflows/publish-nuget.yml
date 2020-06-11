@@ -30,4 +30,4 @@ jobs:
           cd ~/work/SmartExtensions/SmartExtensions/SmartExtensions/
           dotnet build -c release
       - name: Push generated package to GitHub registry
-        run: dotnet nuget push ~/work/SmartExtensions/SmartExtensions/SmartExtensions/out/*.nupkg --skip-duplicate --no-symbols true
+        run: dotnet nuget push ~/work/SmartExtensions/SmartExtensions/SmartExtensions/bin/release/*.nupkg --skip-duplicate --no-symbols true
