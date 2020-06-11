@@ -14,9 +14,8 @@ Install-Package SmartExtensionMethods
 ```
 
 ## Currently Available Extension methods
-Most are self explanatory by name but for some, details will be given to explain them. Documentation is included in the source code as well
 
-### StringExtensions
+### StringExtensions (18)
 
 `CaseInsensitiveContains` Checks if string is contained using case insensitive search</br> 
 `CaseInsensitiveCompare` Compares two string using insensitive case</br> 
@@ -35,32 +34,33 @@ Most are self explanatory by name but for some, details will be given to explain
 `IsPhone` Checks if string resembles a phone number</br> 
 `IsPalindrome` Checks if string is a palindrome</br> 
 `ContainsAll` Check whether the specified string contains an array of strings for each.</br> 
+`DeserializeXml<T>` Deserializes string XML to type &lt;T&gt;.</br> 
 
-### DoubleExtensions
-
-`IsNaN`</br>
-`IsInfinity`</br>
-`GetPercentage` Returns a value representing the percentage requested</br>
-`Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
-
-### FloatExtensions
+### DoubleExtensions (4)
 
 `IsNaN`</br>
 `IsInfinity`</br>
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
-### IntExtensions
+### FloatExtensions (4)
+
+`IsNaN`</br>
+`IsInfinity`</br>
+`GetPercentage` Returns a value representing the percentage requested</br>
+`Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
+
+### IntExtensions (2)
 
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
-### ShortExtensions
+### ShortExtensions (2)
 
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
-### DateTimeExtensions
+### DateTimeExtensions (8)
 
 `FirstDayOfMonth` Get first day of the month</br>
 `FirstDayOfMonth` Get first specific day of the month</br>
@@ -71,10 +71,11 @@ Most are self explanatory by name but for some, details will be given to explain
 `GetNoon` Gets a DateTime representing noon on the current date</br>
 `GetMidnight` Gets a DateTime representing midnight on the current date</br>
 
-### IEnumerableExtensions
+### IEnumerableExtensions (3)
 `Sum` Introduced sum method for LINQ usage for TimeSpans</br>
 `IsNullOrEmpty` Checks if Enumerable is null or empty</br>
 `Foreach` Executes provided action on each item of the Enumerable</br>
 
-### XmlExtensions
+### XmlDocumentExtensions (2)
 `AppendXml` Append one or multiple XML documents to the current XML document</br>
+`DeserializeXml<T>` Deserializes XMLDocument to type &lt;T&gt;.</br> 

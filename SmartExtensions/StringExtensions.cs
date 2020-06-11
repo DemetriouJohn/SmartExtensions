@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 
 namespace SmartExtensions
 {
@@ -210,5 +212,19 @@ namespace SmartExtensions
         /// </summary>
         public static string Join<T>(this IEnumerable<T> values, string separator)
             => string.Join(separator, values);
+
+        /// <summary>
+        ///     Deserializes string to type &lt;T&gt;.
+        /// </summary>
+        /// <typeparam name="T">Generic type parameter.</typeparam>
+        /// <param name="this">String value containing XML</param>
+        /// <returns>The desieralized Xml as &lt;T&gt;</returns>
+        public static T DeserializeXml<T>(this string value)
+        {
+            var serializer = new XmlSerializer(typeof(T));
+            var reader = new StringReader(value);
+
+            return (T)serializer.Deserialize(reader);
+        }
     }
 }

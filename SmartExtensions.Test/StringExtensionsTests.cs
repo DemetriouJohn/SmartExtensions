@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using SmartExtensions.Tests.Helper;
 using Xunit;
 
 namespace SmartExtensions.Test
@@ -92,6 +93,16 @@ namespace SmartExtensions.Test
             list.Add("cd");
             var separator = ",";
             Assert.Equal(string.Join(separator, list), list.Join(separator));
+        }
+
+        [Fact]
+        public void DeserializeXml_ComplexObjectFromMicrosoftDocs_ExpectedResult()
+        {
+            string value = "<PurchaseOrder><MyAddress><FirstName>George</FirstName></MyAddress></PurchaseOrder>";
+
+            var purchaseOrder = value.DeserializeXml<PurchaseOrder>();
+
+            Assert.Equal("George", purchaseOrder.MyAddress.FirstName);
         }
     }
 }

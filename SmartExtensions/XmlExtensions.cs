@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Xml;
+﻿using System.Xml;
 
 namespace SmartExtensions
 {
@@ -12,7 +9,7 @@ namespace SmartExtensions
         /// </summary>
         /// <param name="thisXml">XML</param>
         /// <param name="otherXml">Another XML</param>
-        /// <returns></returns>
+        /// <returns>New XML documented with appended data</returns>
         public static XmlDocument AppendXml(this XmlDocument thisXml, XmlDocument otherXml)
         {
             foreach (XmlNode node in otherXml.DocumentElement.ChildNodes)
@@ -24,6 +21,12 @@ namespace SmartExtensions
             return thisXml;
         }
 
+        /// <summary>
+        /// Merge two XMLs into one
+        /// </summary>
+        /// <param name="thisXml">XML</param>
+        /// <param name="otherXml">Another XML</param>
+        /// <returns>New XML documented with appended data</returns>
         public static XmlDocument AppendXmls(this XmlDocument xmlDoc, params XmlDocument[] xmls)
         {
 
@@ -42,6 +45,11 @@ namespace SmartExtensions
             }
 
             return xmlDoc;
+        }
+
+        public static T DeserializeXml<T>(this XmlDocument xml)
+        {
+            return xml.InnerText.DeserializeXml<T>();
         }
     }
 }
