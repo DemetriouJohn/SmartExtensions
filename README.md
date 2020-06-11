@@ -5,6 +5,8 @@ Methods and extensions all of us write often enough to render grouping them in a
 
 ![.NET Core Build and Run Unit Tests](https://github.com/DevsAnon/SmartExtensions/workflows/.NET%20Core%20Build%20and%20Run%20Unit%20Tests/badge.svg?event=push)
 
+![Generate and Publish Nuget package](https://github.com/DevsAnon/SmartExtensions/workflows/Generate%20and%20Publish%20Nuget/badge.svg?event=push)
+
 ## Installation
 
 ```PM>
