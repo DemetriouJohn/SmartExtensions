@@ -226,5 +226,13 @@ namespace SmartExtensions
 
             return (T)serializer.Deserialize(reader);
         }
+
+        /// <summary>
+        /// Converts Windows and Linux new line characters to HTML break characters
+        /// </summary>
+        public static string Nl2Br(this string s)
+        {
+            return s.Replace("\r\n", "<br />").Replace("\n", "<br />");
+        }
     }
 }

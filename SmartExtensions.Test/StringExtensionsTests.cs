@@ -104,5 +104,12 @@ namespace SmartExtensions.Test
 
             Assert.Equal("George", purchaseOrder.MyAddress.FirstName);
         }
+
+        [Fact]
+        public void Nl2Br_StringWithNewLines_StringHtmlBreaks()
+        {
+            string s = "line1\r\nline2";
+            Assert.Equal("line1<br />line2", s.Nl2Br());
+        }
     }
 }
