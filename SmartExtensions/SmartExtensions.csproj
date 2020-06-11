@@ -3,12 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>SmartExtensionMethods</PackageId>
-    <Version>2.2.3</Version>
+    <Version>2.2.4</Version>
     <Authors>John Demetriou</Authors>
     <Company>devsanon</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageDescription>A list of extension methods for commonly used functionality</PackageDescription>
     <RootNamespace>SmartExtensionMethods</RootNamespace>
+    <PackageTags>extensions, extensionmethods,powerusers,powerextensions</PackageTags>
+    <RepositoryUrl>https://github.com/DevsAnon/SmartExtensions.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
 </Project>
