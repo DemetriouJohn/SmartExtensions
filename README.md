@@ -85,3 +85,11 @@ Install-Package SmartExtensionMethods
 ### XmlDocumentExtensions (2)
 `AppendXml` Append one or multiple XML documents to the current XML document</br>
 `DeserializeXml<T>` Deserializes XMLDocument to type &lt;T&gt;.</br> 
+
+### TimeSpanExtensions (10)
+
+`MilliSeconds` Get TimeSpan.FromMilliSeconds() from int and double </br>
+`Seconds` Get TimeSpan.FromSeconds() from int and double </br> 
+`Minutes` Get TimeSpan.FromMinutes() from int and double </br> 
+`Hours` Get TimeSpan.FromHours() from int and double </br> 
+`Days` Get TimeSpan.FromDays() from int and double </br> 
