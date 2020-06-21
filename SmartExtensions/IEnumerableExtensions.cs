@@ -50,5 +50,28 @@ namespace SmartExtensions
 
             return enumerable;
         }
+
+        public static double StandardDeviationPopulation(this IEnumerable<int> source)
+        {
+            return StdDevLogic(source, 0);
+        }
+
+        public static double StandardDeviation(this IEnumerable<int> source)
+        {
+            return StdDevLogic(source);
+        }
+
+        private static double StdDevLogic(this IEnumerable<int> source, int buffer = 1)
+        {
+            if (source == null)
+            {
+                throw new ArgumentNullException("source");
+            }
+
+            var data = source.ToList();
+            var average = data.Average();
+            var differences = data.Select(u => Math.Pow(average - u, 2.0)).ToList();
+            return Math.Sqrt(differences.Sum() / (differences.Count() - buffer));
+        }
     }
 }

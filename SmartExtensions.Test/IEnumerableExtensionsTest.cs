@@ -42,5 +42,21 @@ namespace SmartExtensions.Test
             List<string> list = null;
             Assert.True(list.IsNullOrEmpty());
         }
+
+        [Fact]
+        public void StandardDeviationPopulation_ExpectedResult()
+        {
+            var nums = new[] { 11, 12, 13, 12, 13, 15, 12, 14, 15, 15, 12, 14, 15 };
+            //Prints out the standard deviation of the entire data set (population)
+            Assert.Equal(1.3803352649943355, nums.StandardDeviationPopulation());
+        }
+
+        [Fact]
+        public void StandardDeviation_ExpectedResult()
+        {
+            var nums = new[] { 11, 12, 13, 12, 13, 15, 12, 14, 15, 15, 12, 14, 15 };
+            //Prints out the standard deviation of the entire data set (population)
+            Assert.Equal(1.4366984945013914, nums.StandardDeviation());
+        }
     }
 }

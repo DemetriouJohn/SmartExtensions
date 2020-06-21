@@ -1,5 +1,3 @@
-using System;
-
 namespace SmartExtensions
 {
     public static class FloatExtensions
