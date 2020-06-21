@@ -13,9 +13,9 @@ Methods and extensions all of us write often enough to render grouping them in a
 Install-Package SmartExtensionMethods
 ```
 
-## Currently Available Extension methods
+## Currently Available Extension methods (56)
 
-### StringExtensions (23)
+### StringExtensions
 
 `CaseInsensitiveContains` Checks if string is contained using case insensitive search</br> 
 `CaseInsensitiveCompare` Compares two string using insensitive case</br> 
@@ -42,31 +42,31 @@ Install-Package SmartExtensionMethods
 `JoinWithSpace` Joins a list of strings with a single space</br>
 `GetEnumValue` Get Enum value (case inssensitive) or return provided default if not found</br>
 
-### DoubleExtensions (4)
+### DoubleExtensions
 
 `IsNaN`</br>
 `IsInfinity`</br>
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
-### FloatExtensions (4)
+### FloatExtensions
 
 `IsNaN`</br>
 `IsInfinity`</br>
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
-### IntExtensions (2)
+### IntExtensions
 
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
-### ShortExtensions (2)
+### ShortExtensions
 
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
 
-### DateTimeExtensions (8)
+### DateTimeExtensions
 
 `FirstDayOfMonth` Get first day of the month</br>
 `FirstDayOfMonth` Get first specific day of the month</br>
@@ -77,18 +77,18 @@ Install-Package SmartExtensionMethods
 `GetNoon` Gets a DateTime representing noon on the current date</br>
 `GetMidnight` Gets a DateTime representing midnight on the current date</br>
 
-### IEnumerableExtensions (3)
+### IEnumerableExtensions
 `Sum` Introduced sum method for LINQ usage for TimeSpans</br>
 `IsNullOrEmpty` Checks if Enumerable is null or empty</br>
 `Foreach` Executes provided action on each item of the Enumerable</br>
 `StandardDeviation` Performs Standard Deviation on the entire dataset</br>
 `StandardDeviationPopulation` Performs Standard Deviation on the entire dataset (Population)</br>
 
-### XmlDocumentExtensions (2)
+### XmlDocumentExtensions
 `AppendXml` Append one or multiple XML documents to the current XML document</br>
 `DeserializeXml<T>` Deserializes XMLDocument to type &lt;T&gt;.</br> 
 
-### TimeSpanExtensions (10)
+### TimeSpanExtensions
 
 `MilliSeconds` Get TimeSpan.FromMilliSeconds() from int and double </br>
 `Seconds` Get TimeSpan.FromSeconds() from int and double </br> 
