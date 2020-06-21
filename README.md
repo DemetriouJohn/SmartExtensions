@@ -81,8 +81,8 @@ Install-Package SmartExtensionMethods
 `Sum` Introduced sum method for LINQ usage for TimeSpans</br>
 `IsNullOrEmpty` Checks if Enumerable is null or empty</br>
 `Foreach` Executes provided action on each item of the Enumerable</br>
-`StandardDeviation` Performs Standard Deviation on the entire dataset</br>
-`StandardDeviationPopulation` Performs Standard Deviation on the entire dataset (Population)</br>
+`StandardDeviation <int>` Performs Standard Deviation on the entire dataset</br>
+`StandardDeviationPopulation <int>` Performs Standard Deviation on the entire dataset (Population)</br>
 
 ### XmlDocumentExtensions
 `AppendXml` Append one or multiple XML documents to the current XML document</br>
