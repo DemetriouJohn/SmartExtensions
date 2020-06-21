@@ -40,7 +40,7 @@ Install-Package SmartExtensionMethods
 `Join` Joins a list of strings with the provided separator</br>
 `JoinWithComma` Joins a list of strings with ", "</br>
 `JoinWithSpace` Joins a list of strings with a single space</br>
-
+`GetEnumValue` Get Enum value (case inssensitive) or return provided default if not found</br>
 
 ### DoubleExtensions (4)
 

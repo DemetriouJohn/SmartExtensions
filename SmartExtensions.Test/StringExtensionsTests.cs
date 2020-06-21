@@ -118,5 +118,11 @@ namespace SmartExtensions.Test
             string value = "foo";
             Assert.True(value.EqualsAny("bar", "baz", "FOO"));
         }
+
+        [Fact]
+        public void GetEnumValue_EnumValue_ExpectedResult()
+        {
+            Assert.Equal(DayOfWeek.Sunday, "Sunday".GetEnumValue(DayOfWeek.Monday));
+        }
     }
 }

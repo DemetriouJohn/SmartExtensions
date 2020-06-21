@@ -255,5 +255,23 @@ namespace SmartExtensions
         {
             return args.Any(x => StringComparer.InvariantCultureIgnoreCase.Equals(x, str));
         }
+
+        /// <summary>
+        /// Convert string to specific Enumeration Value 
+        /// </summary>
+        public static T GetEnumValue<T>(this string value, T defaultValue) where T : struct, IConvertible
+        {
+            if (!typeof(T).IsEnum)
+            {
+                throw new NotSupportedException($"{typeof(T).Name} must be an enumerated type");
+            }
+
+            foreach (T item in Enum.GetValues(typeof(T)))
+            {
+                if (item.ToString().ToLower().Equals(value.Trim().ToLower())) return item;
+            }
+
+            return defaultValue;
+        }
     }
 }
