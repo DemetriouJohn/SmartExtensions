@@ -95,3 +95,6 @@ Install-Package SmartExtensionMethods
 `Minutes` Get TimeSpan.FromMinutes() from int and double </br> 
 `Hours` Get TimeSpan.FromHours() from int and double </br> 
 `Days` Get TimeSpan.FromDays() from int and double </br> 
+
+## Contributing
+Contributions are always welcome! Please feel free to submit pull requests and to open issues. I prefer to have tests on all public methods if possible and where ever else makes sense.
