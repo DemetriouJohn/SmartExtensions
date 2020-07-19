@@ -135,5 +135,21 @@ namespace SmartExtensions
             DateTime atTime = new DateTime(current.Year, current.Month, current.Day, hour, minute, second, millisecond);
             return atTime;
         }
+
+        /// <summary>
+        /// Gets the age of a person
+        /// </summary>
+        /// <param name="dateOfBirth">The date of birth</param>
+        public static int Age(this DateTime dateOfBirth)
+        {
+            if (DateTime.Today.Month < dateOfBirth.Month ||
+                DateTime.Today.Month == dateOfBirth.Month &&
+                DateTime.Today.Day < dateOfBirth.Day)
+            {
+                return DateTime.Today.Year - dateOfBirth.Year - 1;
+            }
+
+            return DateTime.Today.Year - dateOfBirth.Year;
+        }
     }
 }

@@ -142,5 +142,14 @@ namespace SmartExtensions.Tests
             DateTime expected = fridayMidnight.AddHours(14).AddMinutes(30).AddSeconds(15).AddMilliseconds(7);
             Assert.Equal(expected, friday.SetTime(14, 30, 15, 7));
         }
+
+        [Fact]
+        public void GetAge()
+        {
+            var dob = new DateTime(1989, 10, 22);
+
+            var age = dob.Age();
+            Assert.Equal(30, age);
+        }
     }
 }
