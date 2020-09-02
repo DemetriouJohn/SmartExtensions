@@ -126,5 +126,65 @@ namespace SmartExtensions
         {
             return (decimal)(value * percentOf / 100);
         }
+
+        /// <summary>
+        /// Returns value in KiloBytes
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public static double KB(this double value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
+            return value * 1024;
+        }
+
+        /// <summary>
+        /// Megabytes
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static double MB(this double value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
+            return value.KB() * 1024;
+        }
+
+        /// <summary>
+        /// Gigabytes
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static decimal GB(this double value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
+            return (decimal)value.MB() * 1024;
+        }
+
+        /// <summary>
+        /// Terabytes
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static decimal TB(this double value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
+            return value.GB() * 1024;
+        }
     }
 }

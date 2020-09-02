@@ -49,6 +49,10 @@ Install-Package SmartExtensionMethods
 `IsInfinity`</br>
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
+`KB` Returns value in Kilobytes </br>
+`MB` Returns value in Megabytes </br>
+`GB` Returns value in Gigabytes </br>
+`TB` Returns value in Terabytes </br>
 
 ### FloatExtensions
 
@@ -56,16 +60,28 @@ Install-Package SmartExtensionMethods
 `IsInfinity`</br>
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
+`KB` Returns value in Kilobytes </br>
+`MB` Returns value in Megabytes </br>
+`GB` Returns value in Gigabytes </br>
+`TB` Returns value in Terabytes </br>
 
 ### IntExtensions
 
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
+`KB` Returns value in Kilobytes </br>
+`MB` Returns value in Megabytes </br>
+`GB` Returns value in Gigabytes </br>
+`TB` Returns value in Terabytes </br>
 
 ### ShortExtensions
 
 `GetPercentage` Returns a value representing the percentage requested</br>
 `Pow` Extension method for performing Pow arithmetic expression when Power is a positive non-zero, non floating point number by using loop implementation as it is benchmarked to be faster</br>
+`KB` Returns value in Kilobytes </br>
+`MB` Returns value in Megabytes </br>
+`GB` Returns value in Gigabytes </br>
+`TB` Returns value in Terabytes </br>
 
 ### DateTimeExtensions
 

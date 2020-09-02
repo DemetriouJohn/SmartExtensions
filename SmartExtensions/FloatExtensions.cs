@@ -1,3 +1,5 @@
+using System;
+
 namespace SmartExtensions
 {
     public static class FloatExtensions
@@ -26,7 +28,7 @@ namespace SmartExtensions
         ///     Implement Pow by using a for loop when power is a non-zero positive non floating point number
         /// </summary>
         /// <param name="input">double value</param>
-       /// <returns>Value of baseNum raised in Pow</returns>
+        /// <returns>Value of baseNum raised in Pow</returns>
 
         public static double Pow(this float baseNum, byte power)
         {
@@ -43,7 +45,7 @@ namespace SmartExtensions
         ///     Implement Pow by using a for loop when power is a non-zero positive non floating point number
         /// </summary>
         /// <param name="input">double value</param>
-       /// <returns>Value of baseNum raised in Pow</returns>
+        /// <returns>Value of baseNum raised in Pow</returns>
         public static double Pow(this float baseNum, ushort power)
         {
             double result = 1;
@@ -59,7 +61,7 @@ namespace SmartExtensions
         ///     Implement Pow by using a for loop when power is a non-zero positive non floating point number
         /// </summary>
         /// <param name="input">double value</param>
-       /// <returns>Value of baseNum raised in Pow</returns>
+        /// <returns>Value of baseNum raised in Pow</returns>
         public static double Pow(this float baseNum, uint power)
         {
             double result = 1;
@@ -112,6 +114,66 @@ namespace SmartExtensions
         public static decimal GetPercentage(this float value, long percentOf)
         {
             return (decimal)(value * percentOf / 100);
+        }
+
+        /// <summary>
+        /// Returns value in KiloBytes
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public static float KB(this float value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
+            return value * 1024;
+        }
+
+        /// <summary>
+        /// Megabytes
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static float MB(this float value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
+            return value.KB() * 1024;
+        }
+
+        /// <summary>
+        /// Gigabytes
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static double GB(this float value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
+            return value.MB() * 1024d;
+        }
+
+        /// <summary>
+        /// Terabytes
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static double TB(this float value)
+        {
+            if (value < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(value));
+            }
+
+            return value.GB() * 1024;
         }
     }
 }

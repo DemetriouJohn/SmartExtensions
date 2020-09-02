@@ -88,5 +88,33 @@ namespace SmartExtensions.Test
         {
             Assert.Equal(33.0M, 33.0F.GetPercentage((long)100));
         }
+
+        [Fact]
+        public void KB_ExpectedResult()
+        {
+            float v = 33;
+            Assert.Equal(v * 1024, v.KB());
+        }
+
+        [Fact]
+        public void MB_ExpectedResult()
+        {
+            float v = 33;
+            Assert.Equal(v * 1024 * 1024, v.MB());
+        }
+
+        [Fact]
+        public void GB_ExpectedResult()
+        {
+            float v = 33;
+            Assert.Equal((double)v * 1024 * 1024 * 1024, v.GB());
+        }
+
+        [Fact]
+        public void TB_ExpectedResult()
+        {
+            float v = 33;
+            Assert.Equal((double)v * 1024 * 1024 * 1024 * 1024, v.TB());
+        }
     }
 }
