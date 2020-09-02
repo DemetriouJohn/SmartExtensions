@@ -41,6 +41,7 @@ Install-Package SmartExtensionMethods
 `JoinWithComma` Joins a list of strings with ", "</br>
 `JoinWithSpace` Joins a list of strings with a single space</br>
 `GetEnumValue` Get Enum value (case inssensitive) or return provided default if not found</br>
+`ToCamelCase` Converts a string with spaces to a string with camelCase representation</br>
 
 ### DoubleExtensions
 

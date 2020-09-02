@@ -124,5 +124,11 @@ namespace SmartExtensions.Test
         {
             Assert.Equal(DayOfWeek.Sunday, "Sunday".GetEnumValue(DayOfWeek.Monday));
         }
+
+        [Fact]
+        public void ToCamelCase_TestString_SpacesRemovedConvertedToCamelCase()
+        {
+            Assert.Equal("thisIsTestString", "this is Test String".ToCamelCase());
+        }
     }
 }
