@@ -151,5 +151,21 @@ namespace SmartExtensions.Tests
             var age = dob.Age();
             Assert.Equal(30, age);
         }
+
+        [Fact]
+        public void ConvertsUnixTimeToUtc()
+        {
+            const long unixTime = 1599550459;
+            var expected = new DateTime(2020, 09, 08, 7, 34, 19, DateTimeKind.Utc);
+            Assert.Equal(expected, unixTime.FromUnixEpoch());
+        }
+
+        [Fact]
+        public void ConvertsUtcToUnixTime()
+        {
+            const long expected = 1599550459;
+            var dt = new DateTime(2020, 09, 08, 7, 34, 19, 0, DateTimeKind.Utc);
+            Assert.Equal(expected, dt.ToUnixEpoch());
+        }
     }
 }

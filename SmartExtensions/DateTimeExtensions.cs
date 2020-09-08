@@ -4,6 +4,8 @@ namespace SmartExtensions
 {
     public static class DateTimeExtensions
     {
+        private static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+
         /// <summary>
         /// Gets a DateTime representing the first day of the month of DateTime
         /// </summary>
@@ -151,5 +153,17 @@ namespace SmartExtensions
 
             return DateTime.Today.Year - dateOfBirth.Year;
         }
+
+        public static long ToUnixEpoch(this DateTime dt)
+            => (long)dt
+                .Subtract(UnixEpoch)
+                .TotalSeconds;
+
+        public static DateTime ToTimezone(this DateTime dt, string timezoneId)
+            => TimeZoneInfo.ConvertTime(dt, TimeZoneInfo.FindSystemTimeZoneById(timezoneId));
+
+        public static DateTime FromUnixEpoch(this long unixTimeStamp)
+            => UnixEpoch.AddSeconds(unixTimeStamp);
+
     }
 }

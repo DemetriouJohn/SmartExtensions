@@ -92,6 +92,9 @@ Install-Package SmartExtensionMethods
 `GetNoon` Gets a DateTime representing noon on the current date</br>
 `GetMidnight` Gets a DateTime representing midnight on the current date</br>
 `Age` Gets the age of a person</br>
+`ToUnixEpoch` Converts UTC time to Unix time</br>
+`FromUnixEpoch` Converts Unix time to UTC time</br>
+`ToTimezone` Converts between timezones</br>
 
 ### IEnumerableExtensions
 `Sum` Introduced sum method for LINQ usage for TimeSpans</br>
