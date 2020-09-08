@@ -104,6 +104,8 @@ Install-Package SmartExtensionMethods
 `Foreach` Executes provided action on each item of the Enumerable</br>
 `StandardDeviation <int>` Performs Standard Deviation on the entire dataset</br>
 `StandardDeviationPopulation <int>` Performs Standard Deviation on the entire dataset (Population)</br>
+`ToHashSet<T>` Takes any IEnumerable<T> and converts it to a HashSet<T></br>
+
 
 ### XmlDocumentExtensions
 `AppendXml` Append one or multiple XML documents to the current XML document</br>

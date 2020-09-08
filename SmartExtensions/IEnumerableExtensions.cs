@@ -73,5 +73,21 @@ namespace SmartExtensions
             var differences = data.Select(u => Math.Pow(average - u, 2.0)).ToList();
             return Math.Sqrt(differences.Sum() / (differences.Count() - buffer));
         }
+
+        /// <summary>
+        /// Converts an IEnumerable to a HashSet
+        /// </summary>
+        /// <typeparam name="T">The IEnumerable type</typeparam>
+        /// <param name="enumerable">The IEnumerable</param>
+        /// <returns>A new HashSet</returns>
+        public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable)
+        {
+            HashSet<T> hs = new HashSet<T>();
+            foreach (T item in enumerable)
+            {
+                hs.Add(item);
+            }
+            return hs;
+        }
     }
 }
