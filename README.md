@@ -81,6 +81,7 @@ Install-Package SmartExtensionMethods
 `MB` Returns value in Megabytes </br>
 `GB` Returns value in Gigabytes </br>
 `TB` Returns value in Terabytes </br>
+`IsPrime` Checks if number is Prime </br>
 
 ### DateTimeExtensions
 
