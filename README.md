@@ -26,6 +26,7 @@ Install-Package SmartExtensionMethods
 `TryToInt64` Casts string to long using the try pattern</br> 
 `TryToDate` Casts string to date using the try pattern</br> 
 `TryToDecimal` Casts string to decimal using the try pattern</br> 
+`TryToDouble` Casts string to double using the try pattern</br> 
 `Reverse` Reverses the string</br> 
 `IsEmail` Checks if string is an email string</br> 
 `ExtractEmail` Returns a new string containing an email from the original string. If no email found returns String.empty</br> 

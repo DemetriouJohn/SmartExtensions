@@ -116,6 +116,17 @@ namespace SmartExtensions
         }
 
         /// <summary>
+        ///     Attempts to parse string to Double. Returns true if successful and false if not. Result contains the result of parsing
+        /// </summary>
+        /// <param name="input">String value</param>
+        /// <param name="result">Where result will be stored</param>
+        /// <returns>boolean True False to describe if parsing to System.Decimal was successful</returns>
+        public static bool TryToDouble(this string input, out double result)
+        {
+            return double.TryParse(input, out result);
+        }
+
+        /// <summary>
         ///     Reverses a string
         /// </summary>
         /// <param name="input">String value</param>

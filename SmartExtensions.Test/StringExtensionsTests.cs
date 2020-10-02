@@ -1,6 +1,6 @@
+using SmartExtensions.Tests.Helper;
 using System;
 using System.Collections.Generic;
-using SmartExtensions.Tests.Helper;
 using Xunit;
 
 namespace SmartExtensions.Test
@@ -56,7 +56,6 @@ namespace SmartExtensions.Test
             var values = new[] { "John", "Cyprus" };
             Assert.True(value.ContainsAll(values));
         }
-
 
         [Fact]
         public void ContainsAll_NotAllContained_False()
