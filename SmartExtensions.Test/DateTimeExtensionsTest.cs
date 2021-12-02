@@ -149,7 +149,7 @@ namespace SmartExtensions.Tests
             var dob = new DateTime(1989, 10, 22);
 
             var age = dob.Age();
-            Assert.Equal(30, age);
+            Assert.Equal(32, age);
         }
 
         [Fact]
