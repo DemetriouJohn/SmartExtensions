@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>SmartExtensionMethods</PackageId>
-    <Version>3.0.1</Version>
+    <Version>3.0.2</Version>
     <Authors>John Demetriou</Authors>
     <Company>devsanon</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -13,4 +13,9 @@
     <RepositoryUrl>https://github.com/DevsAnon/SmartExtensions.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\readme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
 </Project>

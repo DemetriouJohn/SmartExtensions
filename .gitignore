@@ -135,3 +135,4 @@ _NCrunch*
 /.vscode/
 /SmartExtensions/.vs/SmartExtensions/v16/TestStore/*
 /SmartExtensions/.vs/SmartExtensions/DesignTimeBuild/.dtbcache.v2
+*.dtbcache.v2
