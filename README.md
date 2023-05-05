@@ -11,7 +11,7 @@ Methods and extensions all of us write often enough to render grouping them in a
 Install-Package SmartExtensionMethods
 ```
 
-## Currently Available Extension methods (56)
+## Currently Available Extension methods (84)
 
 ### StringExtensions
 
