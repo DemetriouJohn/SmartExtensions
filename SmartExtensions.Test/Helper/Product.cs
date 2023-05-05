@@ -1,9 +1,6 @@
 using System;
-using Xunit;
-using System.Linq;
 
-
-namespace SmartExtensions.Tests.Helper
+namespace SmartExtensions.Test.Helper
 {
     [Serializable]
     public class PurchaseOrder

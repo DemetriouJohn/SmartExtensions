@@ -1,6 +1,7 @@
-using SmartExtensions.Tests.Helper;
 using System;
 using System.Collections.Generic;
+using SmartExtensionMethods;
+using SmartExtensions.Test.Helper;
 using Xunit;
 
 namespace SmartExtensions.Test

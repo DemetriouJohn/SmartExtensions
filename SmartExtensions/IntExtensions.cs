@@ -1,6 +1,6 @@
 using System;
 
-namespace SmartExtensions
+namespace SmartExtensionMethods
 {
     public static class IntExtensions
     {

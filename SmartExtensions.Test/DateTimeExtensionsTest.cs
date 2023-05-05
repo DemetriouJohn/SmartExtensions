@@ -1,19 +1,18 @@
 using System;
+using SmartExtensionMethods;
 using Xunit;
-using System.Linq;
 
-
-namespace SmartExtensions.Tests
+namespace SmartExtensions.Test
 {
     public class DayTimeExtensionsTests
     {
-        private DateTime _monday;
+        private readonly DateTime _monday;
 
-        private DateTime _tuesday;
-        private DateTime _nextMonday;
+        private readonly DateTime _tuesday;
+        private readonly DateTime _nextMonday;
 
 
-        DateTime _march = new DateTime(2008, 3, 15); // march 15th
+        private readonly DateTime _march = new DateTime(2008, 3, 15); // march 15th
 
         public DayTimeExtensionsTests()
         {

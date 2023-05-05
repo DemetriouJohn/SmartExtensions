@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
-namespace SmartExtensions
+namespace SmartExtensionMethods
 {
     public static class StringExtensions
     {

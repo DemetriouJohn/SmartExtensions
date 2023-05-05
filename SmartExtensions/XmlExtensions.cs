@@ -1,6 +1,6 @@
 ﻿using System.Xml;
 
-namespace SmartExtensions
+namespace SmartExtensionMethods
 {
     public static class XmlExtensions
     {

@@ -1,4 +1,5 @@
 using System;
+using SmartExtensionMethods;
 using Xunit;
 
 namespace SmartExtensions.Test
