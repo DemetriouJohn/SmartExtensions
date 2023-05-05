@@ -166,5 +166,19 @@ namespace SmartExtensions.Test
             var dt = new DateTime(2020, 09, 08, 7, 34, 19, 0, DateTimeKind.Utc);
             Assert.Equal(expected, dt.ToUnixEpoch());
         }
+
+        [Fact]
+        public void FirstBusinessDayOfMonth()
+        {
+            var dt = new DateTime(2023, 5, 15);
+            Assert.Equal(new DateTime(2023, 5, 1), dt.FirstBusinessDayOfMonth());
+        }
+        
+        [Fact]
+        public void FirstBusinessDayOfMonthExcludingHolidays()
+        {
+            var dt = new DateTime(2023, 5, 15);
+            Assert.Equal(new DateTime(2023, 5, 2), dt.FirstBusinessDayOfMonth(new []{new DateTime(2023, 5, 1)}));
+        }
     }
 }

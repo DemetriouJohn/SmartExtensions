@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SmartExtensionMethods
 {
@@ -33,6 +35,53 @@ namespace SmartExtensionMethods
             }
 
             return first;
+        }
+
+        /// <summary>
+        /// Gets a DateTime representing the first business day of the month of the provided DateTime
+        /// </summary>
+        /// <param name="current">The current day</param>
+        /// <returns></returns>
+        public static DateTime FirstBusinessDayOfMonth(this DateTime current)
+        {
+            var firstDate = current.FirstDayOfMonth();
+            if (firstDate.DayOfWeek == DayOfWeek.Saturday)
+            {
+                return firstDate.AddDays(2);
+            }
+
+            if (firstDate.DayOfWeek == DayOfWeek.Sunday)
+            {
+                return firstDate.AddDays(1);
+            }
+
+            return firstDate;
+        }
+
+        /// <summary>
+        /// Gets a DateTime representing the first business day of the month of the provided DateTime that is not part of a given holidays list
+        /// </summary>
+        /// <param name="current">The current day</param>
+        /// <param name="holidays"></param>
+        /// <returns></returns>
+        public static DateTime FirstBusinessDayOfMonth(this DateTime current, IEnumerable<DateTime> holidays)
+        {
+            var firstDate = current.FirstDayOfMonth();
+            if (firstDate.DayOfWeek == DayOfWeek.Saturday)
+            {
+                firstDate = firstDate.AddDays(2);
+            }
+            else if (firstDate.DayOfWeek == DayOfWeek.Sunday)
+            {
+                firstDate = firstDate.AddDays(1);
+            }
+
+            while (holidays.Contains(firstDate))
+            {
+                firstDate = firstDate.AddDays(1);
+            }
+
+            return firstDate;
         }
 
         /// <summary>
