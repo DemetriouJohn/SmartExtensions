@@ -97,7 +97,10 @@ Install-Package SmartExtensionMethods
 `Age` Gets the age of a person</br>
 `ToUnixEpoch` Converts UTC time to Unix time</br>
 `FromUnixEpoch` Converts Unix time to UTC time</br>
-`ToTimezone` Converts between timezones</br>
+`FirstBusinessDayOfMonth` Gets a DateTime representing the first business day of the month of the provided DateTime</br>
+`FirstBusinessDayOfMonth` Gets a DateTime representing the first business day of the month of the provided DateTime that is not part of a given holidays list</br>
+`LastBusinessDayOfMonth` Gets a DateTime representing the last business day of the month of the provided DateTime</br>
+`LastBusinessDayOfMonth` Gets a DateTime representing the last business day of the month of the provided DateTime that is not part of a given holidays list</br>
 
 ### IEnumerableExtensions
 `Sum` Introduced sum method for LINQ usage for TimeSpans</br>
