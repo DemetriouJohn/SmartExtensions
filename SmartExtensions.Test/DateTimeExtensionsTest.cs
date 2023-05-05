@@ -148,7 +148,7 @@ namespace SmartExtensions.Test
             var dob = new DateTime(1989, 10, 22);
 
             var age = dob.Age();
-            Assert.Equal(32, age);
+            Assert.Equal(33, age);
         }
 
         [Fact]
@@ -173,12 +173,28 @@ namespace SmartExtensions.Test
             var dt = new DateTime(2023, 5, 15);
             Assert.Equal(new DateTime(2023, 5, 1), dt.FirstBusinessDayOfMonth());
         }
-        
+
         [Fact]
         public void FirstBusinessDayOfMonthExcludingHolidays()
         {
             var dt = new DateTime(2023, 5, 15);
-            Assert.Equal(new DateTime(2023, 5, 2), dt.FirstBusinessDayOfMonth(new []{new DateTime(2023, 5, 1)}));
+            Assert.Equal(new DateTime(2023, 5, 2), dt.FirstBusinessDayOfMonth(new[] { new DateTime(2023, 5, 1) }));
+        }
+
+        [Fact]
+        public void LastBusinessDayOfMonth()
+        {
+            var dt = new DateTime(2023, 4, 15);
+            Assert.Equal(new DateTime(2023, 4, 28), dt.LastBusinessDayOfMonth());
+        }
+
+        [Fact]
+        public void LastBusinessDayOfMonthExcludingHolidays()
+        {
+            var dt = new DateTime(2023, 4, 15);
+            Assert.Equal(
+                new DateTime(2023, 4, 27),
+                dt.LastBusinessDayOfMonth(new[] { new DateTime(2023, 4, 28) }));
         }
     }
 }

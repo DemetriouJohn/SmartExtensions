@@ -130,6 +130,53 @@ namespace SmartExtensionMethods
         }
 
         /// <summary>
+        /// Gets a DateTime representing the last business day of the month of the provided DateTime
+        /// </summary>
+        /// <param name="current">The current day</param>
+        /// <returns></returns>
+        public static DateTime LastBusinessDayOfMonth(this DateTime current)
+        {
+            var lastDate = current.LastDayOfMonth();
+            if (lastDate.DayOfWeek == DayOfWeek.Saturday)
+            {
+                return lastDate.AddDays(-1);
+            }
+
+            if (lastDate.DayOfWeek == DayOfWeek.Sunday)
+            {
+                return lastDate.AddDays(-2);
+            }
+
+            return lastDate;
+        }
+
+        /// <summary>
+        /// Gets a DateTime representing the last business day of the month of the provided DateTime that is not part of a given holidays list
+        /// </summary>
+        /// <param name="current">The current day</param>
+        /// <param name="holidays"></param>
+        /// <returns></returns>
+        public static DateTime LastBusinessDayOfMonth(this DateTime current, IEnumerable<DateTime> holidays)
+        {
+            var lastDate = current.LastDayOfMonth();
+            if (lastDate.DayOfWeek == DayOfWeek.Saturday)
+            {
+                lastDate = lastDate.AddDays(-1);
+            }
+            else if (lastDate.DayOfWeek == DayOfWeek.Sunday)
+            {
+                lastDate = lastDate.AddDays(-2);
+            }
+
+            while (holidays.Contains(lastDate))
+            {
+                lastDate = lastDate.AddDays(-1);
+            }
+
+            return lastDate;
+        }
+
+        /// <summary>
         /// Gets a DateTime representing midnight on the current date
         /// </summary>
         /// <param name="current">The current date</param>
@@ -148,6 +195,7 @@ namespace SmartExtensionMethods
             DateTime noon = new DateTime(current.Year, current.Month, current.Day, 12, 0, 0);
             return noon;
         }
+
         /// <summary>
         /// Sets the time of the current date with minute precision
         /// </summary>
@@ -213,6 +261,5 @@ namespace SmartExtensionMethods
 
         public static DateTime FromUnixEpoch(this long unixTimeStamp)
             => UnixEpoch.AddSeconds(unixTimeStamp);
-
     }
 }
