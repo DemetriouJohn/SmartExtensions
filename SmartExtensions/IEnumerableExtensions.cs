@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace SmartExtensionMethods
 {
@@ -87,7 +88,27 @@ namespace SmartExtensionMethods
             {
                 hs.Add(item);
             }
+
             return hs;
+        }
+
+        /// <summary>
+        /// A random subset of the IEnumerable
+        /// </summary>
+        /// <typeparam name="T">The IEnumerable type</typeparam>
+        /// <param name="enumerable">The IEnumerable</param>
+        /// <returns>A new IEnuemrable</returns>
+        public static IEnumerable<T> GetRandomSubset<T>(this IReadOnlyList<T> original, uint subsetCount)
+        {
+            var positions = new List<int>();
+            for (var i = 0; i < subsetCount; i++)
+            {
+                positions.Add(RandomNumberGenerator.GetInt32(original.Count));
+            }
+
+            return positions
+                .Select(t => original[t])
+                .ToList();
         }
     }
 }
