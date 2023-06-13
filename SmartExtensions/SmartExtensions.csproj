@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <PackageId>SmartExtensionMethods</PackageId>
-    <Version>3.0.4</Version>
+    <Version>3.0.5</Version>
     <Authors>John Demetriou</Authors>
     <Company>devsanon</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

@@ -109,9 +109,7 @@ Install-Package SmartExtensionMethods
 1. `StandardDeviation <int>` Performs Standard Deviation on the entire dataset
 1. `StandardDeviationPopulation <int>` Performs Standard Deviation on the entire dataset (Population)
 1. `ToHashSet<T>` Takes any IEnumerable<T> and converts it to a HashSet<T>
-
-## ListExtensions
-1. `GetRandomSubset<T>` Takes any List<T> and returns a new List<T> that represent a random subset
+1. `GetRandomSubset<T>` Takes any IEnumerable<T> and returns a new IEnumerable<T> that represent a random subset
 
 ### XmlDocumentExtensions
 1. `AppendXml` Append one or multiple XML documents to the current XML document
