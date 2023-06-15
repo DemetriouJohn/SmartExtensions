@@ -99,13 +99,19 @@ namespace SmartExtensionMethods
         /// <param name="original">The IEnumerable</param>
         /// <param name="subsetCount">The count of values in the subset</param>
         /// <returns>A new IEnuemrable</returns>
-        public static IEnumerable<T> GetRandomSubset<T>(this IEnumerable<T> original, uint subsetCount)
+        public static IEnumerable<T> GetRandomSubset<T>(this List<T> original, uint subsetCount)
         {
-            var originalList = original.ToList();
+            var originalList = original;
             var positions = new List<int>();
             for (var i = 0; i < subsetCount; i++)
             {
-                positions.Add(RandomNumberGenerator.GetInt32(originalList.Count));
+                var number = RandomNumberGenerator.GetInt32(originalList.Count);
+                while (positions.Any(x => x == number))
+                {
+                    number = RandomNumberGenerator.GetInt32(originalList.Count);
+                }
+
+                positions.Add(number);
             }
 
             return positions
