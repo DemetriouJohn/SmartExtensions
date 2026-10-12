@@ -36,9 +36,6 @@ Install-Package SmartExtensionMethods
 1. `DeserializeXml<T>` Deserializes string XML to type &lt;T&gt;. 
 1. `Nl2Br` Converts Windows and Linux new line characters to HTML break characters
 1. `EqualsAny` Check that the given string is in a list of potential matches.
-1. `Join` Joins a list of strings with the provided separator
-1. `JoinWithComma` Joins a list of strings with ", "
-1. `JoinWithSpace` Joins a list of strings with a single space
 1. `GetEnumValue` Get Enum value (case inssensitive) or return provided default if not found
 1. `ToCamelCase` Converts a string with spaces to a string with camelCase representation
 
@@ -110,6 +107,9 @@ Install-Package SmartExtensionMethods
 1. `StandardDeviationPopulation <int>` Performs Standard Deviation on the entire dataset (Population)
 1. `ToHashSet<T>` Takes any IEnumerable<T> and converts it to a HashSet<T>
 1. `GetRandomSubset<T>` Takes any IEnumerable<T> and returns a new IEnumerable<T> that represent a random subset
+1. `Join` Joins a list of strings with the provided separator
+1. `JoinWithComma` Joins a list of strings with ", "
+1. `JoinWithSpace` Joins a list of strings with a single space
 
 ### XmlDocumentExtensions
 1. `AppendXml` Append one or multiple XML documents to the current XML document
