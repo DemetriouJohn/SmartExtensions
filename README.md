@@ -103,7 +103,7 @@ Install-Package SmartExtensionMethods
 1. `LastBusinessDayOfMonth` Gets a DateTime representing the last business day of the month of the provided DateTime that is not part of a given holidays list
 
 ### IEnumerableExtensions
-1. `Sum` Introduced sum method for LINQ usage for TimeSpans
+1. `Sum` Sum method for LINQ usage for TimeSpans
 1. `IsNullOrEmpty` Checks if Enumerable is null or empty
 1. `Foreach` Executes provided action on each item of the Enumerable
 1. `StandardDeviation <int>` Performs Standard Deviation on the entire dataset
